@@ -7,6 +7,7 @@ const story = await getStory('food');
 
 // set ssr to false when in production
 const ssr = import.meta.env.PUBLIC_ENV != 'production';
+console.log('ssr', ssr);
 ---
 
 <Layout title="SveltePage">
