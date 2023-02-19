@@ -23,7 +23,6 @@
     "sass": "^1.58.3"
   },
   "dependencies": {
-    "@astrojs/netlify": "^2.1.2",
     "@astrojs/svelte": "^2.0.2",
     "@storyblok/astro": "^2.0.5",
     "@storyblok/js": "^2.0.16",
