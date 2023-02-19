@@ -4,13 +4,15 @@ import Food from '../../components/Food.svelte';
 import { getStory } from '../../../public/utils/storyblok.js';
 
 const story = await getStory('food');
-// console.log(story);
+
+// set ssr to false when in production
+const ssr = import.meta.env.PUBLIC_ENV != 'prodcution';
 ---
 
 <Layout title="SveltePage">
   <html>
     <body>
-      <Food story={story} />
+      {ssr ? <Food story={story} client:only /> : <Food story={story} />}
     </body>
   </html>
 </Layout>

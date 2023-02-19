@@ -7,13 +7,13 @@ import svelte from '@astrojs/svelte';
 const env = loadEnv('', process.cwd(), 'STORYBLOK');
 // https://astro.build/config
 export default defineConfig({
-  output: process.env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
-  adapter: process.env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
+  output: env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
+  adapter: env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
   integrations: [
     svelte(),
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
-      bridge: process.env.PUBLIC_ENV !== 'production',
+      bridge: env.PUBLIC_ENV !== 'production',
       components: {
         food: 'food',
       },

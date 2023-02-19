@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build:production": "astro build",
+    "build": "astro build",
     "build:preview": "PUBLIC_ENV=preview astro build",
     "preview": "astro preview",
     "lint": "npm run lint:prettier && npm run lint:eslint",
