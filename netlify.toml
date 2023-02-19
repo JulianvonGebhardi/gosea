@@ -9,7 +9,6 @@
   command = "make publish"
   environment = { NODE_VERSION = "18.13.0" }
 
-
 [functions]
   node_bundler = "esbuild"
 
@@ -22,8 +21,8 @@
   [plugin.inputs]
     enable = false
     
-[[redirects]]
-  from = "/api/*" # simplify all calls to serverless functions
-  to = "/.netlify/functions/:splat" # all function calls will go to this path
-  status = 200 # ok code
-  force = true # ensure to always redirect
+# [[redirects]]
+#   from = "/api/*" # simplify all calls to serverless functions
+#   to = "/.netlify/functions/:splat" # all function calls will go to this path
+#   status = 200 # ok code
+#   force = true # ensure to always redirect
