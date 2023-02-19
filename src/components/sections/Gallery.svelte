@@ -3,7 +3,7 @@
 
 <div class="columns is-multiline is-mobile m-0 p-0">
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -13,7 +13,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -23,7 +23,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -33,7 +33,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -43,7 +43,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -53,7 +53,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -63,7 +63,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -73,7 +73,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"
@@ -83,7 +83,7 @@
     >
   </div>
   <div class="column is-4 p-0">
-    <a href="/product"
+    <a href="/food"
       ><img
         class="image is-fullwidth"
         style="height: 307px; object-fit: cover;"

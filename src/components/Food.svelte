@@ -1,11 +1,15 @@
 <script>
-  export let title = 'Gallery';
-  export let description = 'A gallery of images';
+  import { storyblokEditable } from '@storyblok/svelte';
+
+  export let story = {};
 </script>
 
-<h2>{title}</h2>
-<h3>{description}</h3>
-<section class="is-relative section pt-24 py-40-desktop">
+<section
+  use:storyblokEditable={story}
+  class="is-relative section pt-24 py-40-desktop"
+>
+  <h2>{story.group_id}</h2>
+  <h3>{story.lang}</h3>
   <img
     class="image is-hidden-mobile is-hidden-tablet-only is-absolute is-top-0 is-left-0 is-fullheight has-mw-md has-mw-xl-desktop has-mw-3xl-widescreen clip-path-right-top"
     style="object-fit: cover;"
