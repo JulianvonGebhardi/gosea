@@ -4,6 +4,12 @@
   functions = "netlify/functions"
   publish = "dist"
 
+[context.production]
+  publish = "output/"
+  command = "make publish"
+  environment = { NODE_VERSION = "18.13.0" }
+
+
 [functions]
   node_bundler = "esbuild"
 
