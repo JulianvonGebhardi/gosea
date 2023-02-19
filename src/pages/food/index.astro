@@ -1,0 +1,28 @@
+---
+import Layout from '../../components/Layout.astro';
+import Product from '../../components/Product.svelte';
+import { storyblokEditable, renderRichText } from '@storyblok/astro';
+import { getStory } from '../../../public/utils/storyblok.js';
+
+const story = await getStory('food');
+const { blok } = Astro.props;
+const content = renderRichText(blok.content);
+---
+
+<!-- <article>
+  <h1>{blok.title}</h1>
+  <p>{blok.description}</p>
+  <Fragment set:html={content} />
+</article> -->
+<Layout title="SveltePage">
+  <html>
+    <body>
+      <Product
+        {...storyblokEditable(blok)}
+        title={'title'}
+        description={'description'}
+        client:load
+      />
+    </body>
+  </html>
+</Layout>
