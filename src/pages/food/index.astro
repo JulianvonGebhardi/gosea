@@ -4,22 +4,9 @@ import Food from '../../components/Food.svelte';
 import { getStory } from '../../../public/utils/storyblok.js';
 
 const story = await getStory('food');
-
-// import { storyblokEditable, renderRichText } from '@storyblok/astro';
-// import { getStory } from '../../../public/utils/storyblok.js';
-
-// const story = await getStory('food');
-
-// const { food = { default: 'no value given' } } = Astro.props;
-
-// const content = renderRichText(food.content);
+console.log(story);
 ---
 
-<!-- <article>
-  <h1>{blok.title}</h1>
-  <p>{blok.description}</p>
-  <Fragment set:html={content} />
-</article> -->
 <Layout title="SveltePage">
   <html>
     <body>
