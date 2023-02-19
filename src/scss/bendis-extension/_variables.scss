@@ -1,0 +1,141 @@
+// Variables
+$border: #F6FAFD !default;
+$border-hover: #E7F6FD !default;
+$border-light: #F6FAFD !default;
+$border-light-hover: #E7F6FD !default;
+
+$radius: 0px !default;
+$radius-small: 0px !default;
+$radius-large: 0px !default;
+$radius-2x-large: 0px !default;
+
+$text: #000 !default;
+$text-strong: #000 !default;
+
+$primary: #1633AB !default;
+$success: #10b981 !default;
+$info: #6CA2FA !default;
+$warning: #EBE050 !default;
+$danger: #FA5158 !default;
+$light: #F6FAFD !default;
+$dark: #182885 !default;
+
+$grey: #686F8B !default;
+$yellow: #EBE050 !default;
+$green: #10b981 !default;
+$blue: #3C74F9 !default;
+$red: #FA5158 !default;
+
+$black-bis: #2A2C38 !default;
+$black-ter: #3E4353 !default;
+
+$grey-darker: #3E4353 !default;
+$grey-dark: #53596F !default;
+$grey-light: #868CA2 !default;
+$grey-lighter: #A4A9B9 !default;
+$white-ter: #F0F1F3 !default;
+$white-bis: #E1E2E8 !default;
+
+$link: #1633AB !default;
+$link-visited: #1633AB !default;
+$link-hover: #233FDE !default;
+$link-hover-border: #233FDE !default;
+$link-focus: #233FDE !default;
+$link-focus-border: #233FDE !default;
+$link-active: #233FDE !default;
+$link-active-border: #233FDE !default;
+
+$container-max-width: 1140px !default;
+
+$body-family: Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$title-family: Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$title-color: #000 !default;
+$title-weight: 700 !default;
+$title-line-height: 1 !default;
+
+$subtitle-family: Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$subtitle-color: #686F8B !default;
+$subtitle-line-height: 2rem !default;
+$subtitle-weight: 400 !default;
+$subtitle-size: 1rem !default;
+
+$heading-text-transform: none !default;
+
+$size-1: 4rem !default;
+$size-2: 3rem !default;
+$size-3: 2.25rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.125rem !default;
+$size-6: 1rem !default;
+$size-7: 0.875rem !default;
+
+$leading-1: 1.02 !default;
+$leading-2: 1.205 !default;
+$leading-3: 1.185 !default;
+$leading-4: 1.44 !default;
+$leading-5: 1.625 !default;
+$leading-6: 1.75 !default;
+$leading-7: 1.8 !default;
+
+$section-padding: 5rem 1.5rem !default;
+$section-padding-desktop: 5rem 3rem !default;
+
+$tag-color: #1633AB !default;
+$tag-radius: 0px !default;
+$tag-delete-margin: 1px !default;
+
+$size-normal: 0.875rem !default;
+$button-font-weight: 700 !default;
+$button-text-transform: uppercase !default;
+$button-padding-vertical: 1.25em !default;
+$button-padding-horizontal: 2rem !default;
+
+$box-radius: 0px !default;
+$box-shadow: none !default;
+$box-border-color: #C3C5D1 !default;
+$box-border-width: 1px !default;
+$box-border-style: solid !default;
+
+$card-radius: 0.25rem !default;
+$card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !default;
+
+$panel-radius: 0.25rem !default;
+$panel-shadow: none !default;
+
+$input-family: null !default;
+$input-color: #000 !default;
+$input-placeholder-color: #6CA2FA !default;
+$input-shadow: none !default;
+$input-background-color: #F6FAFD !default;
+
+$control-height: 3.25rem !default;
+$control-padding-horizontal: 1.5rem !default;
+$control-border-width: 1px !default;
+
+$label-color: #000 !default;
+$label-weight: 400 !default;
+
+$navbar-item-font-size: 1rem !default;
+$navbar-item-font-weight: 600 !default;
+$navbar-item-color: #182885 !default;
+$navbar-item-hover-color: #182885 !default;
+$navbar-item-hover-background-color: transparent !default;
+$navbar-item-padding-x: 1.25rem !default;
+$navbar-item-padding-y: .5rem !default;
+
+$body-letter-spacing: null !default;
+
+$notification-radius: 0 !default;
+$notification-color: null !default;
+$notification-font-size: null !default;
+
+$notification-border-width: 0 !default;
+$notification-border-top-width: $notification-border-width !default;
+$notification-border-right-width: $notification-border-width !default;
+$notification-border-bottom-width: $notification-border-width !default;
+$notification-border-left-width: $notification-border-width !default;
+
+$notification-border-top-right-radius: $notification-radius !default;
+$notification-border-top-left-radius: $notification-radius !default;
+$notification-border-bottom-right-radius: $notification-radius !default;
+$notification-border-bottom-left-radius: $notification-radius !default;

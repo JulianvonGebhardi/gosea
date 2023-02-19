@@ -8,11 +8,31 @@ const { title } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <!-- <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
+  </head> -->
+  <head>
+    <title>Gosea</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/bulma/bulma.min.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/shuffle-for-bulma.png"
+    />
+    <!-- <script src="/js/main.js"></script> -->
   </head>
   <body>
     <slot />

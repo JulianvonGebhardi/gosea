@@ -9,15 +9,18 @@
     "preview": "astro preview",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:prettier": "prettier --write \"src/**/*.{css,astro}\"",
-    "lint:eslint": "eslint \"src/**/*.{css,js}\""
+    "lint:eslint": "eslint \"src/**/*.{css,js}\"",
+    "css-compile": "sass --style expanded src/scss/bulma-theme.scss public/css/bulma/bulma.css",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output public/css/bulma/bulma.min.css public/css/bulma/bulma.css",
+    "watch-templates": "npm run templates -- --watch",
+    "watch-css": "npm run css-compile -- --watch"
   },
   "devDependencies": {
-    "astro": "^2.0.14",
+    "astro": "^2.0.13",
     "bulma": "^0.9.4",
-    "eslint": "^8.18.0",
-    "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.8.0",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "clean-css-cli": "^4.2.1"
   },
   "dependencies": {
     "@astrojs/svelte": "^2.0.2",
