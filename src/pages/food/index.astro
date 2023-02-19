@@ -13,9 +13,7 @@ console.log('ssr', ssr);
 <Layout title="SveltePage">
   <html>
     <body>
-      <!-- {ssr ? <Food story={story} client:load /> : <Food story={story} />} 
-      -->
-      <Food story={story} client:load />
+      {ssr ? <Food story={story} client:load /> : <Food story={story} />}
     </body>
   </html>
 </Layout>
