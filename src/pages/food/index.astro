@@ -7,14 +7,12 @@ const story = await getStory('food');
 
 // set ssr to false when in production
 const ssr = import.meta.env.PUBLIC_ENV !== 'production';
-console.log('ssr', ssr);
 ---
 
 <Layout title="SveltePage">
   <html>
     <body>
-      <!-- {ssr ? <Food story={story} client:load /> : <Food story={story} />} -->
-      <Food story={story} client:load />
+      {ssr ? <Food story={story} client:load /> : <Food story={story} />}
     </body>
   </html>
 </Layout>

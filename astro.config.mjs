@@ -1,10 +1,13 @@
 import { defineConfig } from 'astro/config';
 import storyblok from '@storyblok/astro';
-import { loadEnv } from 'vite';
+//import { loadEnv } from 'vite';
 import netlify from '@astrojs/netlify/functions';
 import svelte from '@astrojs/svelte';
 
-const env = loadEnv('', process.cwd(), 'STORYBLOK');
+//WICHTIG für Storyblok
+// env = loadEnv('', process.cwd(), 'STORYBLOK');
+// DOES NOT WORK FOR SOME REASONs
+
 // https://astro.build/config
 export default defineConfig({
   output: process.env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
@@ -13,7 +16,7 @@ export default defineConfig({
     svelte(),
     storyblok({
       accessToken: process.env.STORYBLOK_TOKEN,
-      bridge: env.PUBLIC_ENV !== 'production',
+      bridge: process.env.PUBLIC_ENV !== 'production',
       components: {
         food: 'food',
       },
