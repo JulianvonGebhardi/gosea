@@ -7,8 +7,9 @@
 
 
 [context.production]
-  publish = "output/"
-  command = "make publish"
+  publish = "dist"
+  functions = "netlify/functions"
+  command = "astro build"
   environment = { NODE_VERSION = "18.13.0" }
 
 [functions]
