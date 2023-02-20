@@ -1,6 +1,9 @@
 <script>
   // data comes from pages/food
   export let blok;
+  setTimeout(() => {
+    blok = !blok;
+  }, 10000);
 </script>
 
 {#key blok}

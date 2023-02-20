@@ -6,5 +6,5 @@ const { blok } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)}>
-  <Food blok={blok} client:load />
+  <Food blok={blok} client:only />
 </div>
