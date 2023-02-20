@@ -16,7 +16,9 @@
   }
 </script>
 
-<StoryblokComponent blok={story.content} />
+{#if story.content}
+  <StoryblokComponent blok={story.content} />
+{/if}
 
 {#key title}
   <section
