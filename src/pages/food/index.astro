@@ -2,6 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import Food from '../../components/Food.svelte';
 import { getStory } from '../../../public/utils/storyblok.js';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 const story = await getStory('food');
 
@@ -12,7 +13,8 @@ const ssr = import.meta.env.PUBLIC_ENV !== 'production';
 <Layout title="SveltePage">
   <html>
     <body>
-      {ssr ? <Food story={story} client:load /> : <Food story={story} />}
+      <!-- {ssr ? <Food story={story} client:load /> : <Food story={story} />} -->
+      <StoryblokComponent blok={story.content} />
     </body>
   </html>
 </Layout>
