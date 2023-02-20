@@ -1,5 +1,11 @@
 <script>
   import { storyblokEditable } from '@storyblok/svelte';
+  import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    useStoryblokBridge(story.id, (newStory) => (story = newStory));
+  });
 
   export let story = {};
 
@@ -9,6 +15,8 @@
     title += add;
   }
 </script>
+
+<StoryblokComponent blok={story.content} />
 
 {#key title}
   <section
