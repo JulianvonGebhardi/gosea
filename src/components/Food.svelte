@@ -15,17 +15,19 @@
 
   export let story = null;
   let { title, description, images, options, tags } = story.content;
+  let change = true;
+  setInterval(() => {
+    change = !change;
+  }, 1000);
 </script>
 
 <!--  Only works after mounted -->
 
-{#key story.content}
+{#key change}
   {#if story.content && mounted}
     <StoryblokComponent blok={story.content} />
   {/if}
-{/key}
 
-{#key story}
   <section
     use:storyblokEditable={story}
     class="is-relative section pt-24 py-40-desktop"
