@@ -21,7 +21,7 @@
 </script>
 
 {#if story.content}
-  <StoryblokComponent story={story.content} />
+  <StoryblokComponent blok={story.content} />
 {/if}
 
 {#key title}
