@@ -3,10 +3,15 @@
   //INFO
   import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
 
+  import { onMount } from 'svelte';
+
   let mounted = false;
 
+  onMount(() => {
+    mounted = true;
+  });
+
   export let story = null;
-  let { title, description, images, options, tags } = story.content;
 </script>
 
 <!--  Only works after mounted INFO-->
