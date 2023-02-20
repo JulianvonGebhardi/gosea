@@ -22,14 +22,15 @@
   }
 </script>
 
+{#if story.content && mounted}
+  <StoryblokComponent blok={story.content} />
+{/if}
+
 {#key story}
   <section
     use:storyblokEditable={story}
     class="is-relative section pt-24 py-40-desktop"
   >
-    {#if story.content && mounted}
-      <StoryblokComponent blok={story} />
-    {/if}
     <h2 on:click={() => changeTitle('!')}>{title}</h2>
     <p>{description}</p>
     <p>{tags}</p>
