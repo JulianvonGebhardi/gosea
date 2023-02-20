@@ -1,43 +1,33 @@
 import { defineConfig } from 'astro/config';
 import storyblok from '@storyblok/astro';
-//import { loadEnv } from 'vite';
+import { loadEnv } from 'vite';
 import netlify from '@astrojs/netlify/functions';
 import svelte from '@astrojs/svelte';
 //INFO
-import { apiPlugin } from '@storyblok/svelte';
-import adapter from '@sveltejs/adapter-auto';
 
 //WICHTIG für Storyblok
-// env = loadEnv('', process.cwd(), 'STORYBLOK');
-// DOES NOT WORK FOR SOME REASONs
-
+// third parameter filters the prefix like ony env staring with STORYBLOK
+let env = loadEnv('', process.cwd(), '');
+if (!env) env = process.env;
 // https://astro.build/config
 export default defineConfig({
-  output: process.env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
-  adapter: process.env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
+  output: env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
+  adapter: env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
   integrations: [
-    svelte({
-      adapter: adapter(),
-      kit: {
-        alias: {
-          '@storyblok/svelte': './node_modules/@storyblok/svelte',
-        },
-      },
-    }),
-    // INFO
-
+    svelte(),
     storyblok({
       // use: [apiPlugin], // added for svelte life editing //INFO
-      accessToken: process.env.STORYBLOK_TOKEN,
-      bridge: process.env.PUBLIC_ENV !== 'production',
+      accessToken: env.STORYBLOK_TOKEN,
+      bridge: env.PUBLIC_ENV !== 'production',
       components: {
-        food: 'components/storyblok/Food',
+        food: 'storyblok/Food',
+        blogPost: 'storyblok/BlogPost',
       },
-      apiOptions: {
-        // Choose your Storyblok space region
-        // 'eu' (default)
-        //
-      },
+      // apiOptions: {
+      // Choose your Storyblok space region
+      // 'eu' (default)
+      //
+      //},
     }),
   ],
 });

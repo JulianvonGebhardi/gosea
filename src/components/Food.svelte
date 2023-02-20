@@ -10,8 +10,6 @@
   onMount(() => {
     mounted = true;
     console.log(story);
-
-    useStoryblokBridge(story.id, (newStory) => (story = newStory));
   });
 
   // data comes from pages/food
@@ -19,16 +17,16 @@
 </script>
 
 <!--  Only works after mounted INFO-->
-
-<div>
-  {#key story}
+{#key story}
+  <p>fuck this shit</p>
+  <main use:storyblokEditable={story}>
     {#if story && mounted}
-      <StoryblokComponent blok={story.content} />
+      <StoryblokComponent blok={story.content} client:only />
     {/if}
-  {/key}
-</div>
+  </main>
+{/key}
+
 <!-- 
-  
 <section
   use:storyblokEditable={story}
   class="is-relative section pt-24 py-40-desktop"

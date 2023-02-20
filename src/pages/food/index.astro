@@ -1,18 +1,31 @@
 ---
+// deactivating ts-check for this file
+// @ts-nocheck
 import Layout from '../../components/Layout.astro';
 import Food from '../../components/Food.svelte';
-import { getStory } from '../../../public/utils/storyblok.js';
 
-const story = await getStory('food');
+// import { getStory } from '../../../public/utils/storyblok.js';
+import { storyblokEditable } from '@storyblok/astro';
+import { useStoryblokApi } from '@storyblok/astro';
 
+// const story = await getStory('food');
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get('cdn/stories/food', {
+  version: 'draft',
+});
+
+const story = data.story;
+// console.log(story);
 // set ssr to false when in production
 const ssr = import.meta.env.PUBLIC_ENV !== 'production';
 ---
 
 <Layout title="SveltePage">
   <html>
-    <body>
-      {ssr ? <Food story={story} client:only /> : <Food story={story} />}
-    </body>
+    <div {...storyblokEditable(story)}>
+      <Food story={story} client:only />
+      <!-- {ssr ? <Food story={story} client:only /> : <Food story={story} />} -->
+    </div>
   </html>
 </Layout>

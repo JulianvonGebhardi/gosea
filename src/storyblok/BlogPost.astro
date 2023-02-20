@@ -1,9 +1,5 @@
 ---
 import { storyblokEditable, renderRichText } from '@storyblok/astro';
-import Layout from '../components/Layout.astro';
-import { getStory } from '../../public/utils/storyblok.js';
-
-const story = await getStory('home');
 
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
@@ -11,6 +7,6 @@ const content = renderRichText(blok.content);
 
 <article {...storyblokEditable(blok)}>
   <h1>{blok.title}</h1>
-  <p>{blok.description}</p>
-  <Fragment set:html={content} />
+  <p>{blok.desc}</p>
+  <Fragment set:html="{content}" />
 </article>

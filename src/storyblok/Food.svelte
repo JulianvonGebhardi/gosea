@@ -1,16 +1,23 @@
 <script>
+  // no type checking for now
+  // @ts-nocheck
+
+  // import { storyblokEditable } from '@storyblok/astro';
   import { storyblokEditable } from '@storyblok/svelte';
 
-  export let story = null;
-  let { title, description, images, options, tags } = story.content;
+  let blok;
+  console.log(story, 'hello');
+  let { title, description, images, options, tags } = blok;
 </script>
 
 <section
-  use:storyblokEditable={story}
+  {...storyblokEditable(blok)}
   class="is-relative section pt-24 py-40-desktop"
 >
   <h2>{title}</h2>
+
   <p>{description}</p>
+
   <p>{tags}</p>
   <input type="text" bind:value={title} />
   <img
