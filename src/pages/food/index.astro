@@ -15,7 +15,8 @@ const ssr = import.meta.env.PUBLIC_ENV !== 'production';
   <html>
     <body>
       <!-- {ssr ? <Food story={story} client:load /> : <Food story={story} />} -->
-      <StoryblokComponent blok={story} />
+      {story ? <StoryblokComponent blok={story.content} /> : <p>loading</p>}
+      <!-- // <StoryblokComponent blok={story.content} /> -->
     </body>
   </html>
 </Layout>
