@@ -1,22 +1,10 @@
 <script>
   import { storyblokEditable } from '@storyblok/svelte';
-  //INFO
-  import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
-
-  let mounted = false;
 
   export let story = null;
   let { title, description, images, options, tags } = story.content;
 </script>
 
-<!--  Only works after mounted INFO-->
-
-{#key story}
-  {#if story.content && mounted}
-    <StoryblokComponent blok={story.content} />
-  {/if}
-{/key}
-<!-- 
 <section
   use:storyblokEditable={story}
   class="is-relative section pt-24 py-40-desktop"
@@ -127,4 +115,4 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
