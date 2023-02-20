@@ -4,7 +4,11 @@
   import { onMount } from 'svelte';
 
   onMount(() => {
-    useStoryblokBridge(story.id, (newStory) => (story = newStory));
+    try {
+      useStoryblokBridge(story.id, (newStory) => (story = newStory));
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   export let story = {};
@@ -17,7 +21,7 @@
 </script>
 
 {#if story.content}
-  <StoryblokComponent blok={story.content} />
+  <StoryblokComponent story={story.content} />
 {/if}
 
 {#key title}
