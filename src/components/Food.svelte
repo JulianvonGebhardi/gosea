@@ -2,6 +2,7 @@
   import { storyblokEditable } from '@storyblok/svelte';
 
   export let story = {};
+
   let { title, description, images, options, tags } = story.content;
 </script>
 
@@ -9,8 +10,8 @@
   use:storyblokEditable={story}
   class="is-relative section pt-24 py-40-desktop"
 >
-  <h2 bind:this={title}>{title}</h2>
-  <p bind:this={description}>{description}</p>
+  <h2>{title}</h2>
+  <p>{description}</p>
   <p>{tags}</p>
   <img
     class="image is-hidden-mobile is-hidden-tablet-only is-absolute is-top-0 is-left-0 is-fullheight has-mw-md has-mw-xl-desktop has-mw-3xl-widescreen clip-path-right-top"
