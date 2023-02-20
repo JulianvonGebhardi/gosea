@@ -5,6 +5,7 @@ import { getStory } from '../../../public/utils/storyblok.js';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 const story = await getStory('food');
+console.log(story);
 
 // set ssr to false when in production
 const ssr = import.meta.env.PUBLIC_ENV !== 'production';
@@ -14,7 +15,7 @@ const ssr = import.meta.env.PUBLIC_ENV !== 'production';
   <html>
     <body>
       <!-- {ssr ? <Food story={story} client:load /> : <Food story={story} />} -->
-      <StoryblokComponent blok={story.content} />
+      <StoryblokComponent blok={story} />
     </body>
   </html>
 </Layout>
