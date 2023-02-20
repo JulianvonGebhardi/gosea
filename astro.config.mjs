@@ -16,7 +16,7 @@ export default defineConfig({
   adapter: process.env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
   integrations: [
     svelte({
-      adapter: adapter(),
+      // adapter: adapter(),
       kit: {
         alias: {
           '@storyblok/svelte': './node_modules/@storyblok/svelte',
