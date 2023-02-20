@@ -3,7 +3,7 @@
 
   export let story = {};
 
-  const { title, description, image, options, tags } = story.content;
+  const { title, description, images, options, tags } = story.content;
   console.log(story);
 </script>
 
@@ -17,12 +17,12 @@
   <img
     class="image is-hidden-mobile is-hidden-tablet-only is-absolute is-top-0 is-left-0 is-fullheight has-mw-md has-mw-xl-desktop has-mw-3xl-widescreen clip-path-right-top"
     style="object-fit: cover;"
-    src="https://images.unsplash.com/photo-1536851101967-55988a52f455?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1036&amp;q=80"
+    src={images[0].filename}
     alt=""
   /><img
     class="image is-hidden-desktop mb-16"
     style="object-fit: cover;"
-    src="https://images.unsplash.com/photo-1536851101967-55988a52f455?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1036&amp;q=80"
+    src={images[0].filename}
     alt=""
   />
   <div class="container">
