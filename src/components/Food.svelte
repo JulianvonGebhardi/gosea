@@ -3,9 +3,11 @@
   import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
   import { onMount } from 'svelte';
 
+  let mounted = false;
   onMount(() => {
     try {
       useStoryblokBridge(story.id, (newStory) => (story = newStory));
+      mounted = true;
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +22,7 @@
   }
 </script>
 
-{#if story.content}
+{#if story.content && mounted}
   <StoryblokComponent blok={story.content} />
 {/if}
 
