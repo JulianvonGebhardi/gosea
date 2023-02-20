@@ -14,13 +14,10 @@
   });
 
   export let story = null;
-
   let { title, description, images, options, tags } = story.content;
-
-  function changeTitle(add) {
-    title += add;
-  }
 </script>
+
+<!--  Only works after mounted -->
 
 {#key story.content}
   {#if story.content && mounted}
@@ -33,7 +30,7 @@
     use:storyblokEditable={story}
     class="is-relative section pt-24 py-40-desktop"
   >
-    <h2 on:click={() => changeTitle('!')}>{title}</h2>
+    <h2>{title}</h2>
     <p>{description}</p>
     <p>{tags}</p>
     <input type="text" bind:value={title} />

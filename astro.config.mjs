@@ -14,9 +14,15 @@ export default defineConfig({
   output: process.env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
   adapter: process.env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
   integrations: [
-    svelte(),
+    svelte({
+      kit: {
+        alias: {
+          '@storyblok/svelte': './node_modules/@storyblok/svelte',
+        },
+      },
+    }),
     storyblok({
-      use: [apiPlugin],
+      use: [apiPlugin], // added for svelte life editing
       accessToken: process.env.STORYBLOK_TOKEN,
       bridge: process.env.PUBLIC_ENV !== 'production',
       components: {
