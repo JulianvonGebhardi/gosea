@@ -3,6 +3,7 @@ import storyblok from '@storyblok/astro';
 //import { loadEnv } from 'vite';
 import netlify from '@astrojs/netlify/functions';
 import svelte from '@astrojs/svelte';
+import { apiPlugin } from '@storyblok/svelte';
 
 //WICHTIG für Storyblok
 // env = loadEnv('', process.cwd(), 'STORYBLOK');
@@ -15,6 +16,7 @@ export default defineConfig({
   integrations: [
     svelte(),
     storyblok({
+      use: [apiPlugin],
       accessToken: process.env.STORYBLOK_TOKEN,
       bridge: process.env.PUBLIC_ENV !== 'production',
       components: {
