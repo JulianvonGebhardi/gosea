@@ -11,7 +11,7 @@
     }
   });
 
-  export let story = {};
+  export let story = null;
 
   let { title, description, images, options, tags } = story.content;
 
