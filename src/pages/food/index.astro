@@ -2,7 +2,7 @@
 // deactivating ts-check for this file
 // @ts-nocheck
 import Layout from '../../components/Layout.astro';
-import Food from '../../components/Food.svelte';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 // import { getStory } from '../../../public/utils/storyblok.js';
 import { storyblokEditable } from '@storyblok/astro';
@@ -24,8 +24,8 @@ const ssr = import.meta.env.PUBLIC_ENV !== 'production';
 <Layout title="SveltePage">
   <html>
     <div {...storyblokEditable(story)}>
-      <Food story={story} client:only />
-      <!-- {ssr ? <Food story={story} client:only /> : <Food story={story} />} -->
+      <!--  Only works after mounted INFO-->
+      <StoryblokComponent blok={story.content} />
     </div>
   </html>
 </Layout>

@@ -1,0 +1,10 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+import Food from './svelte/Food.svelte';
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <Food blok={blok} client:load />
+</div>

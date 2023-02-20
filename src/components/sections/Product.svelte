@@ -2,7 +2,7 @@
 </script>
 
 <section class="is-relative section pt-24 py-40-desktop">
-  <h1>{blok.group_id}</h1>
+  <h1 />
   <img
     class="image is-hidden-mobile is-hidden-tablet-only is-absolute is-top-0 is-left-0 is-fullheight has-mw-md has-mw-xl-desktop has-mw-3xl-widescreen clip-path-right-top"
     style="object-fit: cover;"

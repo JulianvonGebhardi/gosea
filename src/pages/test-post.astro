@@ -6,7 +6,7 @@ import Layout from '../components/Layout.astro';
 
 console.log('hello world');
 const storyblokApi = useStoryblokApi();
-const { data } = await storyblokApi.get('cdn/stories/test-post', {
+const { data } = await storyblokApi.get('cdn/stories/food', {
   version: 'draft',
 });
 
@@ -15,8 +15,7 @@ console.log(story);
 ---
 
 <Layout title="Hello">
-  <StoryblokComponent blok={story.content} />
-  <div {...storyblokEditable(story.content)}>
-    <!-- <StoryblokComponent blok={story.content} /> -->
-  </div>
+  <!-- <StoryblokComponent blok="{story.content}" /> -->
+  <!-- <div {...storyblokEditable(story.content)}> -->
+  <!-- <StoryblokComponent blok={story.content} /> -->
 </Layout>
