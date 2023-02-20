@@ -1,33 +1,31 @@
 <script>
   import { storyblokEditable } from '@storyblok/svelte';
-  import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
-  import { onMount } from 'svelte';
+  //INFO
+  // import { useStoryblokBridge, StoryblokComponent } from '@storyblok/svelte';
+  // import { onMount } from 'svelte';
 
   let mounted = false;
-  onMount(() => {
-    try {
-      useStoryblokBridge(story.id, (newStory) => (story = newStory));
-      mounted = true;
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  // INFO
+  // onMount(() => {
+  //   try {
+  //     useStoryblokBridge(story.id, (newStory) => (story = newStory));
+  //     mounted = true;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // });
 
   export let story = null;
   let { title, description, images, options, tags } = story.content;
-  let change = true;
-  setInterval(() => {
-    change = !change;
-  }, 10000);
 </script>
 
-<!--  Only works after mounted -->
+<!--  Only works after mounted INFO-->
 
-{#key change}
+<!-- {#key story}
   {#if story.content && mounted}
     <StoryblokComponent blok={story.content} />
   {/if}
-{/key}
+{/key} -->
 
 <section
   use:storyblokEditable={story}
