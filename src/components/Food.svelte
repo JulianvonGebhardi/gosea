@@ -9,15 +9,19 @@
 
   onMount(() => {
     mounted = true;
+    console.log(story);
+
+    useStoryblokBridge(story.id, (newStory) => (story = newStory));
   });
 
+  // data comes from pages/food
   export let story = null;
 </script>
 
 <!--  Only works after mounted INFO-->
 
 {#key story}
-  {#if story.content && mounted}
+  {#if story && mounted}
     <StoryblokComponent blok={story.content} />
   {/if}
 {/key}
