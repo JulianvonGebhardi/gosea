@@ -31,7 +31,7 @@ export default defineConfig({
       accessToken: process.env.STORYBLOK_TOKEN,
       bridge: process.env.PUBLIC_ENV !== 'production',
       components: {
-        food: 'storyblok/Food',
+        food: 'components/storyblok/Food',
       },
       apiOptions: {
         // Choose your Storyblok space region
