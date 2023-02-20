@@ -6,6 +6,7 @@
   let { title, description, images, options, tags } = story.content;
 
   function changeTitle(titleNew) {
+    titleNew += '!';
     title = titleNew;
   }
 </script>
