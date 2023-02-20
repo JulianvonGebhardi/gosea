@@ -26,7 +26,7 @@
   <StoryblokComponent blok={story.content} />
 {/if}
 
-{#key title}
+{#key story}
   <section
     use:storyblokEditable={story}
     class="is-relative section pt-24 py-40-desktop"
