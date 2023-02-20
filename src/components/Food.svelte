@@ -22,9 +22,11 @@
   }
 </script>
 
-{#if story.content && mounted}
-  <StoryblokComponent blok={story.content} />
-{/if}
+{#key story.content}
+  {#if story.content && mounted}
+    <StoryblokComponent blok={story.content} />
+  {/if}
+{/key}
 
 {#key story}
   <section
