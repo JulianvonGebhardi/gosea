@@ -4,6 +4,10 @@
   export let story = {};
 
   let { title, description, images, options, tags } = story.content;
+
+  function changeTitle(titleNew) {
+    title = titleNew;
+  }
 </script>
 
 {#key title}
@@ -11,7 +15,7 @@
     use:storyblokEditable={story}
     class="is-relative section pt-24 py-40-desktop"
   >
-    <h2>{title}</h2>
+    <h2 on:click={() => changeTitle('New title')}>{title}</h2>
     <p>{description}</p>
     <p>{tags}</p>
     <img
