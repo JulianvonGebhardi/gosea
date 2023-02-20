@@ -4,8 +4,8 @@ import storyblok from '@storyblok/astro';
 import netlify from '@astrojs/netlify/functions';
 import svelte from '@astrojs/svelte';
 //INFO
-// import { apiPlugin } from '@storyblok/svelte';
-// import adapter from '@sveltejs/adapter-auto';
+import { apiPlugin } from '@storyblok/svelte';
+import adapter from '@sveltejs/adapter-auto';
 
 //WICHTIG für Storyblok
 // env = loadEnv('', process.cwd(), 'STORYBLOK');
@@ -16,16 +16,16 @@ export default defineConfig({
   output: process.env.PUBLIC_ENV === 'preview' ? 'server' : 'static',
   adapter: process.env.PUBLIC_ENV === 'preview' ? netlify() : undefined,
   integrations: [
-    svelte(),
+    svelte({
+      adapter: adapter(),
+      kit: {
+        alias: {
+          '@storyblok/svelte': './node_modules/@storyblok/svelte',
+        },
+      },
+    }),
     // INFO
-    //   {
-    //   adapter: adapter(),
-    //   kit: {
-    //     alias: {
-    //       '@storyblok/svelte': './node_modules/@storyblok/svelte',
-    //     },
-    //   },
-    // }
+
     storyblok({
       // use: [apiPlugin], // added for svelte life editing //INFO
       accessToken: process.env.STORYBLOK_TOKEN,

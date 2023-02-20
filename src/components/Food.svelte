@@ -15,17 +15,20 @@
   });
 
   // data comes from pages/food
-  export let story = null;
+  export let story;
 </script>
 
 <!--  Only works after mounted INFO-->
 
-{#key story}
-  {#if story && mounted}
-    <StoryblokComponent blok={story.content} />
-  {/if}
-{/key}
+<div>
+  {#key story}
+    {#if story && mounted}
+      <StoryblokComponent blok={story.content} />
+    {/if}
+  {/key}
+</div>
 <!-- 
+  
 <section
   use:storyblokEditable={story}
   class="is-relative section pt-24 py-40-desktop"
