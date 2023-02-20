@@ -4,6 +4,7 @@ import storyblok from '@storyblok/astro';
 import netlify from '@astrojs/netlify/functions';
 import svelte from '@astrojs/svelte';
 import { apiPlugin } from '@storyblok/svelte';
+import adapter from '@sveltejs/adapter-auto';
 
 //WICHTIG für Storyblok
 // env = loadEnv('', process.cwd(), 'STORYBLOK');
